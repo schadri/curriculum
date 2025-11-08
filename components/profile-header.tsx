@@ -1,19 +1,29 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Mail, Phone } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Mail, Phone } from "lucide-react";
 
 export function ProfileHeader() {
   return (
     <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-border">
       <div className="flex items-center gap-6">
-        <Avatar className="h-28 w-28">
-          <AvatarImage src="/professional-portrait.png" alt="Profile" />
+        <Avatar className="h-28 w-28 overflow-hidden">
+          <AvatarImage
+            src="/professional-portrait.png"
+            alt="Profile"
+            className="h-full w-full object-cover object-center transform scale-110"
+          />
           <AvatarFallback>AS</AvatarFallback>
         </Avatar>
 
         <div>
-          <h1 className="text-4xl font-bold text-cyan-400 mb-2">Adrian Schuster</h1>
-          <h2 className="text-xl text-foreground mb-2">Cybersecurity & Software Development</h2>
-          <p className="text-muted-foreground">Student • Ethical Hacking • Pentesting • React</p>
+          <h1 className="text-4xl font-bold text-cyan-400 mb-2">
+            Adrian Schuster
+          </h1>
+          <h2 className="text-xl text-foreground mb-2">
+            Cybersecurity & Software Development
+          </h2>
+          <p className="text-muted-foreground">
+            Student • Ethical Hacking • Pentesting • React
+          </p>
         </div>
       </div>
 
@@ -34,5 +44,5 @@ export function ProfileHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
