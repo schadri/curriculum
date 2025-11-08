@@ -45,7 +45,7 @@ export function ContactSection() {
               github.com/schadri
             </a>
             <a
-              href="www.linkedin.com/in/adrián-schuster-0400b5270"
+              href="https://www.linkedin.com/in/adrián-schuster-0400b5270"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cyan-400 hover:underline block"

@@ -44,11 +44,11 @@ export function ProfileHeader() {
         </div>
         <div className="flex items-center gap-2 text-cyan-400">
           <a
-            href="www.linkedin.com/in/adrián-schuster-0400b5270"
+            href="https://www.linkedin.com/in/adrian-schuster-0400b5270"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
-            aria-label="LinkedIn - adrian schuster"
+            aria-label="LinkedIn - Adrian Schuster"
           >
             LinkedIn / adrian-schuster
           </a>

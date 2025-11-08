@@ -1,6 +1,3 @@
-/*
-  Contenido original comentado por solicitud del usuario.
-  -- Inicio del contenido comentado -------------------------------------------------
 import {
   Card,
   CardContent,
@@ -106,68 +103,6 @@ export function PortfolioSection() {
           </CardContent>
         </Card>
       ))}
-    </div>
-  );
-}
-  -- Fin del contenido comentado ---------------------------------------------------
-*/
-
-// Componente simplificado: muestra "proximamente" con trazo cyan-300.
-// El relleno parpadea (blink) y el trazo se mantiene fijo (no afectado por la animación).
-export function PortfolioSection() {
-  return (
-    <div className="flex items-center justify-center h-64">
-      <p className="relative text-3xl font-semibold leading-none">
-        {/* Capa de borde/contorno fija (cyan-400) */}
-        <span className="stroke-layer text-cyan-800 pointer-events-none">
-          proximamente
-        </span>
-        {/* Capa de relleno parpadeante (cyan-300) */}
-        <span className="blink text-cyan-300">proximamente</span>
-      </p>
-
-      <style jsx>{`
-        @keyframes blink {
-          0% {
-            opacity: 1;
-          }
-          50% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        /* La capa superior parpadea (solo el relleno) */
-        .blink {
-          position: relative;
-          z-index: 2;
-          animation: blink 1.2s steps(2, start) infinite;
-        }
-
-        /* La capa inferior dibuja el borde usando currentColor como color de stroke */
-        .stroke-layer {
-          position: absolute;
-          left: 0;
-          top: 0;
-          z-index: 1;
-          /* Use currentColor para que tome la clase text-cyan-400 aplicada */
-          -webkit-text-stroke: 1.5px currentColor; /* borde más visible */
-          -webkit-text-fill-color: transparent;
-          /* Fallback: simular borde con text-shadow, usando a color similar a cyan-400 */
-          text-shadow: -1px -1px 0 rgba(34, 211, 238, 0.95),
-            1px -1px 0 rgba(34, 211, 238, 0.95),
-            -1px 1px 0 rgba(34, 211, 238, 0.95),
-            1px 1px 0 rgba(34, 211, 238, 0.95);
-          display: inline-block;
-        }
-
-        /* Ensura que ambos spans se alineen y ocupen el mismo espacio */
-        p > span {
-          display: inline-block;
-        }
-      `}</style>
     </div>
   );
 }
