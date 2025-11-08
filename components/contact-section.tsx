@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Phone } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, Phone } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -9,7 +9,9 @@ export function ContactSection() {
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
-          <h4 className="text-sm font-semibold text-muted-foreground mb-2">Email</h4>
+          <h4 className="text-sm font-semibold text-muted-foreground mb-2">
+            Email
+          </h4>
           <a
             href="mailto:schusteradrian2001@gmail.com"
             className="text-cyan-400 hover:underline flex items-center gap-2"
@@ -20,7 +22,9 @@ export function ContactSection() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-muted-foreground mb-2">Phone</h4>
+          <h4 className="text-sm font-semibold text-muted-foreground mb-2">
+            Phone
+          </h4>
           <p className="text-foreground flex items-center gap-2">
             <Phone className="h-4 w-4" />
             +54 9 11 2408-9201
@@ -28,7 +32,9 @@ export function ContactSection() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-muted-foreground mb-2">GitHub / LinkedIn</h4>
+          <h4 className="text-sm font-semibold text-muted-foreground mb-2">
+            GitHub / LinkedIn
+          </h4>
           <div className="space-y-1">
             <a
               href="https://github.com/schadri"
@@ -39,16 +45,16 @@ export function ContactSection() {
               github.com/schadri
             </a>
             <a
-              href="https://linkedin.com/in/adrian-schuster"
+              href="www.linkedin.com/in/adrián-schuster-0400b5270"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cyan-400 hover:underline block"
             >
-              linkedin.com/in/adrian-schuster
+              linkedin.com/in/adrián-schuster
             </a>
           </div>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
