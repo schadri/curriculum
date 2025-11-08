@@ -1,14 +1,14 @@
-"use client"
-import { ProfileHeader } from "@/components/profile-header"
-import { ProfessionalSummary } from "@/components/professional-summary"
-import { EducationSection } from "@/components/education-section"
-import { TechnicalSkills } from "@/components/technical-skills"
-import { CoursesSection } from "@/components/courses-section"
-import { LanguagesSection } from "@/components/languages-section"
-import { ContactSection } from "@/components/contact-section"
-import { PracticalProjects } from "@/components/practical-projects"
-import { PortfolioSection } from "@/components/portfolio-section"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client";
+import { ProfileHeader } from "@/components/profile-header";
+import { ProfessionalSummary } from "@/components/professional-summary";
+import { EducationSection } from "@/components/education-section";
+import { TechnicalSkills } from "@/components/technical-skills";
+import { CoursesSection } from "@/components/courses-section";
+import { LanguagesSection } from "@/components/languages-section";
+import { ContactSection } from "@/components/contact-section";
+import { PracticalProjects } from "@/components/practical-projects";
+import { PortfolioSection } from "@/components/portfolio-section";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
               value="cv"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-cyan-400 data-[state=active]:bg-transparent data-[state=active]:text-cyan-400 px-6 py-3"
             >
-              CV
+              Curriculum Vitae
             </TabsTrigger>
             <TabsTrigger
               value="portfolio"
@@ -55,5 +55,5 @@ export default function Home() {
         </Tabs>
       </main>
     </div>
-  )
+  );
 }
