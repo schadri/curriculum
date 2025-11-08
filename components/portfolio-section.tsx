@@ -112,7 +112,7 @@ export function PortfolioSection() {
   -- Fin del contenido comentado ---------------------------------------------------
 */
 
-// Componente simplificado: muestra "proximamente" con trazo cyan-300.
+// Componente simplificado: muestra "coming soon" con trazo cyan-300.
 // El relleno parpadea (blink) y el trazo se mantiene fijo (no afectado por la animación).
 export function PortfolioSection() {
   return (
@@ -120,10 +120,10 @@ export function PortfolioSection() {
       <p className="relative text-3xl font-semibold leading-none">
         {/* Capa de borde/contorno fija (cyan-400) */}
         <span className="stroke-layer text-cyan-800 pointer-events-none">
-          proximamente
+          coming soon
         </span>
         {/* Capa de relleno parpadeante (cyan-300) */}
-        <span className="blink text-cyan-300">proximamente</span>
+        <span className="blink text-cyan-300">coming soon</span>
       </p>
 
       <style jsx>{`
