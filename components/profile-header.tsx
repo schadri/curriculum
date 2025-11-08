@@ -30,17 +30,39 @@ export function ProfileHeader() {
       <div className="flex flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 text-cyan-400">
           <Mail className="h-4 w-4" />
-          <span>schusteradrian2001@gmail.com</span>
+          <a
+            href="mailto:schusteradrian2001@gmail.com"
+            className="underline"
+            aria-label="Enviar correo a Adrian Schuster"
+          >
+            schusteradrian2001@gmail.com
+          </a>
         </div>
         <div className="flex items-center gap-2 text-muted-foreground">
           <Phone className="h-4 w-4" />
           <span>+54 9 11 2408-9201</span>
         </div>
         <div className="flex items-center gap-2 text-cyan-400">
-          <span>LinkedIn / adrian-schuster</span>
+          <a
+            href="www.linkedin.com/in/adrián-schuster-0400b5270"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+            aria-label="LinkedIn - adrian schuster"
+          >
+            LinkedIn / adrian-schuster
+          </a>
         </div>
         <div className="flex items-center gap-2 text-cyan-400">
-          <span>GitHub / schadri</span>
+          <a
+            href="https://www.github.com/schadri"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+            aria-label="LinkedIn - adrian schuster"
+          >
+            GitHub / schadri
+          </a>
         </div>
       </div>
     </header>
