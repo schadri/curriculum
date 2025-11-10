@@ -22,7 +22,7 @@ export function ProfileHeader() {
             Cybersecurity & Software Development
           </h2>
           <p className="text-muted-foreground">
-            Student • Ethical Hacking • Pentesting • React
+            Student • Ethical Hacking • Pentesting
           </p>
         </div>
       </div>
