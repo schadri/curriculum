@@ -7,7 +7,6 @@ import { CoursesSection } from "@/components/courses-section";
 import { LanguagesSection } from "@/components/languages-section";
 import { ContactSection } from "@/components/contact-section";
 import { PracticalProjects } from "@/components/practical-projects";
-import { PortfolioSection } from "@/components/portfolio-section";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
@@ -17,41 +16,22 @@ export default function Home() {
         <ProfileHeader />
 
         <Tabs defaultValue="cv" className="mt-8">
-          <TabsList className="w-full justify-start border-b border-border rounded-none bg-transparent p-0 h-auto">
-            <TabsTrigger
-              value="cv"
-              className="rounded-none border-b-2 border-transparent data-[state=active]:border-cyan-400 data-[state=active]:bg-transparent data-[state=active]:text-cyan-400 px-6 py-3"
-            >
-              Curriculum Vitae
-            </TabsTrigger>
-            <TabsTrigger
-              value="portfolio"
-              className="rounded-none border-b-2 border-transparent data-[state=active]:border-cyan-400 data-[state=active]:bg-transparent data-[state=active]:text-cyan-400 px-6 py-3"
-            >
-              Portfolio
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="cv" className="mt-8">
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-8">
-                <ProfessionalSummary />
-                <TechnicalSkills />
-                <PracticalProjects />
-              </div>
-
-              <div className="space-y-8">
-                <EducationSection />
-                <CoursesSection />
-                <LanguagesSection />
-                <ContactSection />
-              </div>
+          <TabsContent value="cv" className="mt-8"></TabsContent>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="space-y-8">
+              <ProfessionalSummary />
+              <TechnicalSkills />
+              <PracticalProjects />
             </div>
-          </TabsContent>
 
-          <TabsContent value="portfolio" className="mt-8">
-            <PortfolioSection />
-          </TabsContent>
+            <div className="space-y-8">
+              <EducationSection />
+              <CoursesSection />
+              <LanguagesSection />
+              <ContactSection />
+            </div>
+          </div>
+          {/* Portfolio content removed; only Curriculum Vitae remains */}
         </Tabs>
       </main>
     </div>
