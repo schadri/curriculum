@@ -19,10 +19,10 @@ export function ProfileHeader() {
             Adrian Schuster
           </h1>
           <h2 className="text-xl text-foreground mb-2">
-            Cybersecurity & Software Development
+            SOC Trainee | Cybersecurity Student
           </h2>
           <p className="text-muted-foreground">
-            Student • Ethical Hacking • Pentesting
+            Blue Team • Log Analysis • Networking • SIEM Fundamentals
           </p>
         </div>
       </div>

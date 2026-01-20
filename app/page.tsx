@@ -8,6 +8,7 @@ import { LanguagesSection } from "@/components/languages-section";
 import { ContactSection } from "@/components/contact-section";
 import { PracticalProjects } from "@/components/practical-projects";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SoftSkills } from "@/components/soft-skills";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
             <div className="space-y-8">
               <ProfessionalSummary />
               <TechnicalSkills />
+              <SoftSkills />
               <PracticalProjects />
             </div>
 
