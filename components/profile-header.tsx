@@ -7,7 +7,7 @@ export function ProfileHeader() {
       <div className="flex items-center gap-6">
         <Avatar className="h-28 w-28 overflow-hidden">
           <AvatarImage
-            src="/professional-portrait.png"
+            src="/profile.jfif"
             alt="Profile"
             className="h-full w-full object-cover object-center transform scale-110"
           />
