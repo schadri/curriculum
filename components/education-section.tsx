@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Collapsible,
@@ -5,8 +7,22 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
+import * as React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export function EducationSection() {
+  const [selectedCert, setSelectedCert] = React.useState<{
+    name: string;
+    title: string;
+  } | null>(null);
   const eitCertificates = [
     {
       name: "introduccion-ciberseguridad.jpeg",
@@ -40,15 +56,14 @@ export function EducationSection() {
               <CollapsibleContent className="absolute right-0 mt-1 bg-card border border-border rounded-md p-2 shadow-lg min-w-max">
                 <div className="space-y-2">
                   {eitCertificates.map((cert) => (
-                    <a
+                    <button
                       key={cert.name}
-                      href={`/EIT/${cert.name}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 underline transition-colors whitespace-nowrap px-2 py-1"
+                      type="button"
+                      onClick={() => setSelectedCert(cert)}
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 underline transition-colors whitespace-nowrap px-2 py-1 text-left"
                     >
                       {cert.title}
-                    </a>
+                    </button>
                   ))}
                 </div>
               </CollapsibleContent>
@@ -83,6 +98,42 @@ export function EducationSection() {
           <p className="text-sm text-muted-foreground">2015 — 2020</p>
         </div>
       </CardContent>
+
+      {/* Dialog modal to preview certificate */}
+      <Dialog
+        open={!!selectedCert}
+        onOpenChange={(open) => !open && setSelectedCert(null)}
+      >
+        <DialogContent className="w-[92%] max-w-md sm:max-w-3xl">
+          <DialogHeader>
+            <DialogTitle className="text-cyan-400">
+              {selectedCert?.title}
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="py-2">
+            {selectedCert && (
+              <img
+                src={`/EIT/${selectedCert.name}`}
+                alt={selectedCert.title}
+                className="mx-auto max-h-[70vh] w-auto max-w-full object-contain"
+              />
+            )}
+          </div>
+
+          <DialogFooter className="items-center sm:justify-end">
+            <a
+              href={selectedCert ? `/EIT/${selectedCert.name}` : "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="text-cyan-400" variant="outline" size="sm">
+                Abrir en nueva pestaña
+              </Button>
+            </a>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </Card>
   );
 }
