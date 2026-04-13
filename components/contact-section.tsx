@@ -1,16 +1,21 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 export function ContactSection() {
+  const { language } = useLanguage();
+
   return (
     <Card className="bg-card border-border">
       <CardHeader>
-        <CardTitle className="text-cyan-400">Contact & Links</CardTitle>
+        <CardTitle className="text-cyan-400">
+          {language === 'en' ? 'Contact & Links' : 'Contacto y Enlaces'}
+        </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h4 className="text-sm font-semibold text-muted-foreground mb-2">
-            Email
+            {language === 'en' ? 'Email' : 'Correo'}
           </h4>
           <a
             href="mailto:schusteradrian2001@gmail.com"
@@ -23,7 +28,7 @@ export function ContactSection() {
 
         <div>
           <h4 className="text-sm font-semibold text-muted-foreground mb-2">
-            Phone
+            {language === 'en' ? 'Phone' : 'Teléfono'}
           </h4>
           <p className="text-foreground flex items-center gap-2">
             <Phone className="h-4 w-4" />

@@ -1,3 +1,4 @@
+
 "use client";
 import { ProfileHeader } from "@/components/profile-header";
 import { ProfessionalSummary } from "@/components/professional-summary";
@@ -11,10 +12,31 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SoftSkills } from "@/components/soft-skills";
 import { ProjectsSection } from "@/components/projects-section";
 import { Briefcase, Code2 } from "lucide-react";
+import { LanguageProvider, useLanguage } from "@/components/language-provider";
 
-export default function Home() {
+function MainApp() {
+  const { language, setLanguage } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background relative pb-24">
+      {/* Language Toggle */}
+      <div className="absolute top-6 right-6 z-50 flex gap-3 bg-card/80 backdrop-blur-md p-2 rounded-full border border-cyan-500/20 shadow-[0_0_15px_rgba(6,182,212,0.1)]">
+        <button 
+          onClick={() => setLanguage('es')}
+          className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 ${language === 'es' ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'opacity-50 hover:opacity-100'}`}
+          title="Español"
+        >
+          <span className="text-xl">🇦🇷</span>
+        </button>
+        <button 
+          onClick={() => setLanguage('en')}
+          className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 ${language === 'en' ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'opacity-50 hover:opacity-100'}`}
+          title="English"
+        >
+          <span className="text-xl">🇺🇸</span>
+        </button>
+      </div>
+
       <main className="container mx-auto px-4 py-8 max-w-6xl">
         <ProfileHeader />
 
@@ -49,19 +71,27 @@ export default function Home() {
                 className="rounded-full px-6 py-2.5 data-[state=active]:bg-cyan-500/10 data-[state=active]:text-cyan-400 data-[state=active]:shadow-none flex items-center gap-2 transition-all duration-300"
               >
                 <Briefcase className="w-4 h-4" />
-                <span className="font-medium">Currículum</span>
+                <span className="font-medium">{language === 'en' ? 'Resume' : 'Currículum'}</span>
               </TabsTrigger>
               <TabsTrigger 
                 value="proyectos" 
                 className="rounded-full px-6 py-2.5 data-[state=active]:bg-cyan-500/10 data-[state=active]:text-cyan-400 data-[state=active]:shadow-none flex items-center gap-2 transition-all duration-300"
               >
                 <Code2 className="w-4 h-4" />
-                <span className="font-medium">Proyectos</span>
+                <span className="font-medium">{language === 'en' ? 'Projects' : 'Proyectos'}</span>
               </TabsTrigger>
             </TabsList>
           </div>
         </Tabs>
       </main>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <LanguageProvider>
+      <MainApp />
+    </LanguageProvider>
   );
 }

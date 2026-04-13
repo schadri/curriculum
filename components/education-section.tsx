@@ -14,25 +14,26 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-  DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/language-provider";
 
 export function EducationSection() {
+  const { language } = useLanguage();
   const [selectedCert, setSelectedCert] = React.useState<{
     name: string;
     title: string;
   } | null>(null);
+
   const eitCertificates = [
     {
       name: "introduccion-ciberseguridad.jpeg",
-      title: "Introduccion a Ciberseguridad",
+      title: language === 'en' ? "Introduction to Cybersecurity" : "Introducción a Ciberseguridad",
     },
     {
       name: "introduccion-informatica-forence.jpeg",
-      title: "Introduccion a informatica forense",
+      title: language === 'en' ? "Introduction to Computer Forensics" : "Introducción a Informática Forense",
     },
-    // Agrega más conforme vayan siendo completados
   ];
 
   const showCertificates = eitCertificates.length > 0;
@@ -40,7 +41,7 @@ export function EducationSection() {
   return (
     <Card className="bg-card border-border">
       <CardHeader>
-        <CardTitle className="text-cyan-400">Education</CardTitle>
+        <CardTitle className="text-cyan-400">{language === 'en' ? 'Education' : 'Educación'}</CardTitle>
       </CardHeader>
 
       <CardContent className="space-y-6">
@@ -70,30 +71,32 @@ export function EducationSection() {
             </Collapsible>
           )}
           <p className="text-sm text-muted-foreground mb-2">
-            Sep 2025 — Present
+            {language === 'en' ? 'Sep 2025 — Present' : 'Sep 2025 — Presente'}
           </p>
           <p className="text-sm text-muted-foreground">
-            Focus: Security Operations (SOC), Networking Fundamentals, Log
-            Analysis, SIEM Concepts, Blue Team Practices
+            {language === 'en' 
+              ? 'Focus: Security Operations (SOC), Networking Fundamentals, Log Analysis, SIEM Concepts, Blue Team Practices'
+              : 'Enfoque: Operaciones de Seguridad (SOC), Fundamentos de Redes, Análisis de Logs, Conceptos de SIEM, Prácticas Blue Team'}
           </p>
         </div>
 
         <div>
           <h3 className="font-semibold text-foreground mb-1">
-            Software Development — UADE
+            {language === 'en' ? 'Software Development — UADE' : 'Desarrollo de Software — UADE'}
           </h3>
           <p className="text-sm text-muted-foreground mb-2">
-            Mar 2023 — Sep 2025 (Studies completed partially)
+            {language === 'en' ? 'Mar 2023 — Sep 2025 (Studies completed partially)' : 'Mar 2023 — Sep 2025 (Estudios incompletos/parciales)'}
           </p>
           <p className="text-sm text-muted-foreground">
-            Core subjects: Programming, Web Development, Databases, Systems
-            Fundamentals
+            {language === 'en'
+              ? 'Core subjects: Programming, Web Development, Databases, Systems Fundamentals'
+              : 'Materias principales: Programación, Desarrollo Web, Bases de Datos, Fundamentos de Sistemas'}
           </p>
         </div>
 
         <div>
           <h3 className="font-semibold text-foreground mb-1">
-            High School Diploma — Escuela Nacional N°17 “Primera Junta”
+            {language === 'en' ? 'High School Diploma' : 'Bachiller'} — Escuela Nacional N°17 “Primera Junta”
           </h3>
           <p className="text-sm text-muted-foreground">2015 — 2020</p>
         </div>
@@ -128,7 +131,7 @@ export function EducationSection() {
               rel="noopener noreferrer"
             >
               <Button className="text-cyan-400" variant="outline" size="sm">
-                Abrir en nueva pestaña
+                {language === 'en' ? 'Open in new tab' : 'Abrir en nueva pestaña'}
               </Button>
             </a>
           </DialogFooter>

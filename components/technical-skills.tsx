@@ -1,7 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/components/language-provider";
 
 export function TechnicalSkills() {
+  const { language } = useLanguage();
+
   const socSkills = [
     "Log Analysis",
     "Security Monitoring",
@@ -40,13 +43,15 @@ export function TechnicalSkills() {
   return (
     <Card className="bg-card border-border">
       <CardHeader>
-        <CardTitle className="text-cyan-400">Technical Skills</CardTitle>
+        <CardTitle className="text-cyan-400">
+          {language === 'en' ? 'Technical Skills' : 'Habilidades Técnicas'}
+        </CardTitle>
       </CardHeader>
 
       <CardContent className="space-y-6">
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            SOC & Security Fundamentals
+            {language === 'en' ? 'SOC & Security Fundamentals' : 'SOC y Fundamentos de Seguridad'}
           </h3>
           <div className="flex flex-wrap gap-2">
             {socSkills.map((skill) => (
@@ -63,7 +68,7 @@ export function TechnicalSkills() {
 
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            Systems & Networking
+            {language === 'en' ? 'Systems & Networking' : 'Sistemas y Redes'}
           </h3>
           <div className="flex flex-wrap gap-2">
             {systemsAndNetworking.map((skill) => (
@@ -80,7 +85,7 @@ export function TechnicalSkills() {
 
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            Security Tools (Hands-on)
+            {language === 'en' ? 'Security Tools (Hands-on)' : 'Herramientas de Seguridad (Práctica)'}
           </h3>
           <div className="flex flex-wrap gap-2">
             {securityTools.map((skill) => (
@@ -97,7 +102,7 @@ export function TechnicalSkills() {
 
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-            Development & Other
+            {language === 'en' ? 'Development & Other' : 'Desarrollo y Otros'}
           </h3>
           <div className="flex flex-wrap gap-2">
             {devAndOther.map((skill) => (

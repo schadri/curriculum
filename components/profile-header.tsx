@@ -1,7 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Mail, Phone } from "lucide-react";
+import { useLanguage } from "@/components/language-provider";
 
 export function ProfileHeader() {
+  const { language } = useLanguage();
+
   return (
     <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-border">
       <div className="flex items-center gap-6">
@@ -19,10 +22,14 @@ export function ProfileHeader() {
             Adrian Schuster
           </h1>
           <h2 className="text-xl text-foreground mb-2">
-            SOC Trainee | Cybersecurity Student
+            {language === 'en' 
+              ? 'SOC Trainee | Cybersecurity Student' 
+              : 'Trainee SOC | Estudiante de Ciberseguridad'}
           </h2>
           <p className="text-muted-foreground">
-            Blue Team • Log Analysis • Networking • SIEM Fundamentals
+            {language === 'en'
+              ? 'Blue Team • Log Analysis • Networking • SIEM Fundamentals'
+              : 'Blue Team • Análisis de Logs • Redes • Fundamentos SIEM'}
           </p>
         </div>
       </div>
