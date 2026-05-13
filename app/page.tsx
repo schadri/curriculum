@@ -13,28 +13,16 @@ import { SoftSkills } from "@/components/soft-skills";
 import { ProjectsSection } from "@/components/projects-section";
 import { Briefcase, Code2 } from "lucide-react";
 import { LanguageProvider, useLanguage } from "@/components/language-provider";
+import { SettingsMenu } from "@/components/settings-menu";
 
 function MainApp() {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background relative pb-24">
-      {/* Language Toggle */}
-      <div className="absolute top-6 right-6 z-50 flex gap-2 bg-card/80 backdrop-blur-md p-1.5 rounded-full border border-cyan-500/20 shadow-[0_0_15px_rgba(6,182,212,0.1)]">
-        <button 
-          onClick={() => setLanguage('es')}
-          className={`flex items-center justify-center min-w-[2.5rem] h-8 px-2 rounded-full font-bold text-sm transition-all duration-300 ${language === 'es' ? 'bg-cyan-500/10 text-cyan-400' : 'text-muted-foreground opacity-70 hover:opacity-100 hover:text-cyan-300'}`}
-          title="Español"
-        >
-          ES
-        </button>
-        <button 
-          onClick={() => setLanguage('en')}
-          className={`flex items-center justify-center min-w-[2.5rem] h-8 px-2 rounded-full font-bold text-sm transition-all duration-300 ${language === 'en' ? 'bg-cyan-500/10 text-cyan-400' : 'text-muted-foreground opacity-70 hover:opacity-100 hover:text-cyan-300'}`}
-          title="English"
-        >
-          EN
-        </button>
+      {/* Top Controls */}
+      <div className="absolute top-6 right-6 z-50">
+        <SettingsMenu />
       </div>
 
       <main className="container mx-auto px-4 py-8 max-w-6xl">

@@ -14,12 +14,12 @@ const projectsData = [
     },
     es: {
       title: "GOS Central Online",
-      description: "GOS (Gastronomic Organization Service) – WebApp de Empleo Sectorial\n\nArquitectura: Desarrollo Full Stack de punta a punta (End-to-End) utilizando Next.js para el frontend y SSR.\n\nBackend & Datos: Integración híbrida de Supabase (Base de datos relacional y Auth) y Firebase (posiblemente para notificaciones o almacenamiento en tiempo real), garantizando escalabilidad y seguridad de los datos.\n\nRol: Desarrollador Único. Responsable del diseño de UI, lógica de negocio, modelado de base de datos y despliegue.",
+      description: "GOS (Gastronomic Organization Service) – WebApp de Empleo Sectorial\n\nArquitectura: Desarrollo Full Stack de punta a punta (End-to-End) utilizando Next.js para el frontend y SSR.\n\nBackend & Datos: Integración híbrida de Supabase (Base de datos relacional y Auth) y Firebase (para notificaciones o almacenamiento en tiempo real), garantizando escalabilidad y seguridad de los datos.\n\nRol: Desarrollador Único. Responsable del diseño de UI, lógica de negocio, modelado de base de datos y despliegue.",
       tags: ["Web App", "Dashboard", "Gestión"],
     },
     en: {
       title: "GOS Central Online",
-      description: "GOS (Gastronomic Organization Service) – Sectoral Employment WebApp\n\nArchitecture: End-to-End Full Stack development using Next.js for the frontend and SSR.\n\nBackend & Data: Hybrid integration of Supabase (Relational Database and Auth) and Firebase (possibly for real-time notifications or storage), ensuring scalability and data security.\n\nRole: Sole Developer. Responsible for UI design, business logic, database modeling, and deployment.",
+      description: "GOS (Gastronomic Organization Service) – Sectoral Employment WebApp\n\nArchitecture: End-to-End Full Stack development using Next.js for the frontend and SSR.\n\nBackend & Data: Hybrid integration of Supabase (Relational Database and Auth) and Firebase (for real-time notifications or storage), ensuring scalability and data security.\n\nRole: Sole Developer. Responsible for UI design, business logic, database modeling, and deployment.",
       tags: ["Web App", "Dashboard", "Management"],
     }
   },
