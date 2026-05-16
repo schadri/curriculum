@@ -6,6 +6,24 @@ import { useLanguage } from "@/components/language-provider";
 
 const projectsData = [
   {
+    id: 0,
+    image: "https://api.microlink.io/?url=https://vibe-pass-seven.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
+    links: {
+      demo: "https://vibe-pass-seven.vercel.app/",
+      github: "https://github.com/schadri/VibePass"
+    },
+    es: {
+      title: "VibePass",
+      description: "VibePass – Gestión de Eventos & Promociones 2x1\n\nArquitectura: Plataforma robusta para la gestión integral de eventos, optimizada para flujos de registro 2x1.\n\nTecnologías: Next.js 15+, Supabase (Base de datos y Auth), Tailwind CSS 4.\n\nFuncionalidades Clave: Generación automática de QRs, escáner integrado para control de acceso, dashboard administrativo con métricas en tiempo real y automatización de envío de entradas vía email.",
+      tags: ["Eventos", "QR System", "Dashboard"],
+    },
+    en: {
+      title: "VibePass",
+      description: "VibePass – Event Management & 2x1 Promotions\n\nArchitecture: Robust platform for comprehensive event management, optimized for 2x1 registration flows.\n\nTechnologies: Next.js 15+, Supabase (Database and Auth), Tailwind CSS 4.\n\nKey Features: Automatic QR generation, integrated scanner for access control, administrative dashboard with real-time metrics, and automated email ticketing system.",
+      tags: ["Events", "QR System", "Dashboard"],
+    }
+  },
+  {
     id: 1,
     image: "https://api.microlink.io/?url=https://www.goscentral.online/&screenshot=true&meta=false&embed=screenshot.url",
     links: {
