@@ -7,9 +7,9 @@ import { useLanguage } from "@/components/language-provider";
 const projectsData = [
   {
     id: 0,
-    image: "https://api.microlink.io/?url=https://vibe-pass-seven.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
+    image: "https://api.microlink.io/?url=https://entradas.adrianschuster.com.ar/&screenshot=true&meta=false&embed=screenshot.url",
     links: {
-      demo: "https://vibe-pass-seven.vercel.app/",
+      demo: "https://entradas.adrianschuster.com.ar/",
       github: "https://github.com/schadri/VibePass"
     },
     es: {
